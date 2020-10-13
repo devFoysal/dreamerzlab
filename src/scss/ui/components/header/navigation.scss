@@ -1,0 +1,19 @@
+.navbar-brand{
+    padding: 30px 15px;
+    color: $primary;
+    font-weight: $bold;
+    transition: 0.25s linear;
+}
+.navbar-nav{
+    .menu-list{
+        .nav-item{
+            .nav-link{
+                padding:30px 15px;
+                transition: 0.25s linear;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

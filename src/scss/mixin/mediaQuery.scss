@@ -1,0 +1,23 @@
+@mixin Responsive($point) {
+
+    @if($point == mobile){
+        @media only screen and (min-width: $mobile) and (max-width: ($tablet - 1px)){@content;}
+    }
+
+    @else if($point == tablet){
+        @media only screen and (min-width: $tablet) and (max-width: ($laptop - 1px)){@content;}
+    }
+
+    @else if($point == laptop){
+        @media only screen and (min-width: $laptop) and (min-width: ($desktop - 1px)) {@content;}
+    }
+
+    @else if($point == desktop){
+        @media only screen and (min-width: $desktop) and (max-width: ($lgDesktop - 1px)){@content;}
+    }
+
+    @else if($point == lgDesktop){
+        @media only screen and (min-width: $lgDesktop){@content;}
+    }
+    
+}

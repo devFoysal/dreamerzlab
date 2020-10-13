@@ -1,0 +1,118 @@
+
+// Ubuntu
+@font-face {
+    font-family: 'UbuntuLight';
+    src: url("/fonts/ubuntu/Ubuntu-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'UbuntuRegular';
+    src: url("/fonts/ubuntu/Ubuntu-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'UbuntuMedium';
+    src: url("/fonts/ubuntu/Ubuntu-Medium.ttf") format('truetype');
+       
+}
+
+@font-face {
+    font-family: 'UbuntuBold';
+    src: url("/fonts/ubuntu/Ubuntu-Bold.ttf") format('truetype');
+}
+
+
+// SutonnyMJ
+@font-face {
+    font-family: 'SutunnymjRegular';
+    src: url("/fonts/sutonnymj/SutonnyOMJ.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'SutunnymjBold';
+    src: url("/fonts/sutonnymj/SutonnyMJ-Bold") format('truetype');
+}
+
+
+// u
+@font-face {
+    font-family: 'MuliLight';
+    src: url("/fonts/muli/Muli-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'MuliRegular';
+    src: url("/fonts/muli/Muli-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'MuliMedium';
+    src: url("/fonts/muli/Muli-Medium.ttf") format('truetype');
+       
+}
+
+@font-face {
+    font-family: 'MuliSemiBold';
+    src: url("/fonts/muli/Muli-SemiBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'MuliBold';
+    src: url("/fonts/muli/Muli-Bold.ttf") format('truetype');
+}
+
+
+
+// Hind Siliguri
+@font-face {
+    font-family: 'HindSiliguriLight';
+    src: url("/fonts/hindsiliguri/HindSiliguri-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'HindSiliguriRegular';
+    src: url("/fonts/hindsiliguri/HindSiliguri-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'HindSiliguriMedium';
+    src: url("/fonts/hindsiliguri/HindSiliguri-Medium.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'HindSiliguriSemiBold';
+    src: url("/fonts/hindsiliguri/HindSiliguri-SemiBold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'HindSiliguriBold';
+    src: url("/fonts/hindsiliguri/HindSiliguri-Bold.ttf") format('truetype');
+}
+
+$bodyFont: MuliRegular, HindSiliguriRegular, sans-serif;
+// $bodyFont: UbuntuRegular, SutunnymjRegular, sans-serif;
+
+
+// Font Size
+$bodyFontSize: 16px;
+$h1: 3.5rem; //56px
+$h2: 3rem; //48px
+$h3: 2.25rem; //36px
+$h4: 1.5rem; //24px
+$h5: 1.25rem; //20px
+$h6: 1.125rem; //18px
+$a: 1rem; //16px
+$p: 1rem; //14px
+$p2: 0.875rem; //14px
+
+// Font Weight
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$blackBold: 900;
+
+// Line height
+$lineHeight200: 200%;
+$lineHeight150: 150%;
+$lineHeight125: 125%;
+$lineHeight100: 100%;
