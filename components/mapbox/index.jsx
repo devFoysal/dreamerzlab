@@ -50,12 +50,23 @@ const Mapbox = () => {
     });
   }, [mapHeight]);
 
+  // State information popup
+  const statePopup = (e) => {
+    const feature = e.features && e.features.length > 0 && e.features;
+    const property = feature[0].properties;
+    const lngLat = e.lngLat;
+    setPopState({
+      property,
+      lngLat,
+    });
+  };
   return (
     <ReactMapGL
       {...viewport}
       mapStyle="mapbox://styles/foysalmahmud/ckg945rrt0bp419s6fmi3gq81"
       onViewportChange={(nextViewport) => setViewport(nextViewport)}
       mapboxApiAccessToken={mapboxToken}
+      onClick={(e) => statePopup(e)}
     >
       {/* Data source */}
       <Source id="usState" type="geojson" data={USStates} />
@@ -76,6 +87,31 @@ const Mapbox = () => {
           "line-width": 2,
         }}
       />
+
+      {/* Popup */}
+      {popState && Object.keys(popState.property).length > 2 && (
+        <Popup
+          latitude={popState.lngLat[1]}
+          longitude={popState.lngLat[0]}
+          closeButton={true}
+          closeOnClick={false}
+          onClose={() => setPopState(null)}
+          anchor="top"
+        >
+          <div>
+            <p>
+              <strong>{popState.property.admin}</strong>
+            </p>
+            <p>{popState.property.name}</p>
+            <a
+              href={popState.property.wikipedia}
+              className="d-block state-info"
+            >
+              {popState.property.wikipedia}
+            </a>
+          </div>
+        </Popup>
+      )}
     </ReactMapGL>
   );
 };
