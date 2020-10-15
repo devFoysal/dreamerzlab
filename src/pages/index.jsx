@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Mapbox from "../../components/mapbox";
 
 const Home = () => {
   return (
-    <div>
-      Home page
-    </div>
-  )
-}
+    <>
+      <Mapbox />
+    </>
+  );
+};
 
-export default Home
+export default Home;
