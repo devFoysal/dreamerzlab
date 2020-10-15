@@ -19,7 +19,7 @@ module.exports = {
     return config;
   },
   poweredByHeader: false,
-  exportTrailingSlash: true,
+  trailingSlash: true,
   assetPrefix:
     process.env.APP_MODE === "production"
       ? process.env.BASE_URL
