@@ -7,6 +7,7 @@ const mapboxToken =
   "pk.eyJ1Ijoia2t1cnR6IiwiYSI6ImNrOWE4djN1eDAyd3UzZXBuYzF1OWtjYTQifQ.obmfLm5bA5yqrac86Fw8GQ";
 
 const Mapbox = () => {
+  const [popState, setPopState] = useState(null);
   const [mapHeight, setMapHeight] = useState(0);
   const [viewport, setViewport] = useState(null);
 
@@ -24,7 +25,7 @@ const Mapbox = () => {
   };
 
   // LineLayer options
-  const stateCircleLayer = {
+  const stateLineLayer = {
     id: "usStateLines",
     type: "line",
     source: "usState",
@@ -65,8 +66,16 @@ const Mapbox = () => {
         paint={{
           "fill-color": "rgba(243,156,18, 0.3)",
         }}
-      />   
+      />
 
+      {/* Line layer */}
+      <Layer
+        {...stateLineLayer}
+        paint={{
+          "line-color": "rgba(243,156,18, 1)",
+          "line-width": 2,
+        }}
+      />
     </ReactMapGL>
   );
 };
